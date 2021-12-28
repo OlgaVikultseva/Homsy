@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Homsy</string>
+    <string name="choice_building_screen_header_text">Choose your favorite building!</string>
+
+    <string name="apartment_category">Apartment</string>
+    <string name="house_category">House</string>
+    <string name="near_you_category">Near you!</string>
+    <string name="popular_category">Popular</string>
+
+    <string name="house_building_type">House</string>
+    <string name="apartment_building_type">Apartment</string>
+</resources>
