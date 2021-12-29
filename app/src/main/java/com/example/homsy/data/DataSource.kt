@@ -10,7 +10,7 @@ class DataSource {
         listOf(
             CategoryItem(1, "Apartment", false),
             CategoryItem(2, "House", false),
-            CategoryItem(3, "Near you!", false),
+            CategoryItem(3, "Near you!", true),
             CategoryItem(4, "Popular", false)
         )
 

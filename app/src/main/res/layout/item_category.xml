@@ -10,12 +10,21 @@
         android:id="@+id/category_name_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textColor="@color/purple_200"
+        android:textSize="26sp"
+        android:textColor="@color/black25"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="@string/apartment_category" />
+
+    <View
+        android:id="@+id/dot"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:background="@drawable/ic_dot"
+        app:layout_constraintBottom_toBottomOf="@+id/category_name_text_view"
+        app:layout_constraintStart_toEndOf="@+id/category_name_text_view"
+        app:layout_constraintTop_toTopOf="@+id/category_name_text_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

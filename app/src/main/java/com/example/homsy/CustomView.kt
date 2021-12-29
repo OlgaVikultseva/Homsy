@@ -62,9 +62,5 @@ class CustomView(context: Context, attrs: AttributeSet) : View(context, attrs) {
         }
 
         canvas.drawRect(100f, 100f, 200f, 250f, paint)
-
-
-
     }
-
 }

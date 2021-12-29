@@ -2,8 +2,10 @@ package com.example.homsy.presentation.choicebuilding.adapter
 
 import android.annotation.SuppressLint
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.RecyclerView
 import com.example.homsy.databinding.ItemCategoryBinding
 
@@ -37,6 +39,7 @@ class CategoryAdapter(
 
         fun bind(category: CategoryItem) {
             binding.categoryNameTextView.text = category.name
+            binding.dot.visibility = if (category.isSelected) View.VISIBLE else View.INVISIBLE
         }
     }
 }

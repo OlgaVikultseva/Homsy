@@ -5,8 +5,12 @@
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
+
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="blue">#1976d2</color>
+    <color name="dark_blue">#004ba0</color>
 
     <!--white-->
     <color name="white87">#dfffffff</color>
@@ -22,9 +26,11 @@
     <color name="black87">#df000000</color>
     <color name="black70">#B3000000</color>
     <color name="black54">#8a000000</color>
-    <color name="black50">#88000000</color>
-    <color name="black35">#5f000000</color>
-    <color name="black25">#44000000</color>
-    <color name="black12">#1f000000</color>
-    <color name="black10">#1b000000</color>
+    <color name="black50">#80000000</color>
+    <color name="black35">#59000000</color>
+    <color name="black25">#40000000</color>
+    <color name="black15">#26000000</color>
+    <color name="black10">#1A000000</color>
+    <color name="black6">#0F000000</color>
+    <color name="black3">#08000000</color>
 </resources>
