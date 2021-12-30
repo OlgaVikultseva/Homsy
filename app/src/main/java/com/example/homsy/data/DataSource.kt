@@ -18,9 +18,9 @@ class DataSource {
         listOf(
             BuildingItem(1, "Victoria Village", "Apartment", "3000 $", R.drawable.apartment1, false),
             BuildingItem(2, "9 Rosamond Street", "House", "4600 $", R.drawable.house1, false),
-            BuildingItem(3, "1505-85 Wood Street", "House", "5800 $", R.drawable.house3, false),
+            BuildingItem(3, "85 Wood Street", "House", "5800 $", R.drawable.house3, false),
             BuildingItem(4, "6 Tamola Park Court", "Apartment", "2600 $", R.drawable.apartment2, false),
             BuildingItem(5, "34 Willowbrook Road", "Apartment", "3100 $", R.drawable.apartment3, false),
-            BuildingItem(6, "Mono Amaranth Town Line", "House", "4000 $", R.drawable.house2, false),
+            BuildingItem(6, "Mono Amaranth Town", "House", "4000 $", R.drawable.house2, false),
         )
 }

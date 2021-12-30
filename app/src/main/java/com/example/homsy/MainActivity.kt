@@ -1,7 +1,7 @@
 package com.example.homsy
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import com.example.homsy.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

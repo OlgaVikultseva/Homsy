@@ -4,24 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="16dp">
+    android:layout_marginBottom="24dp">
 
     <com.example.homsy.VerticalTextView
         android:id="@+id/category_name_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="26sp"
-        android:textColor="@color/black25"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/category_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="@string/apartment_category" />
+        tools:text="@string/apartment_category"/>
 
     <View
         android:id="@+id/dot"
-        android:layout_width="8dp"
-        android:layout_height="8dp"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
         android:background="@drawable/ic_dot"
         app:layout_constraintBottom_toBottomOf="@+id/category_name_text_view"
         app:layout_constraintStart_toEndOf="@+id/category_name_text_view"

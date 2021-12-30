@@ -39,7 +39,13 @@ class CategoryAdapter(
 
         fun bind(category: CategoryItem) {
             binding.categoryNameTextView.text = category.name
-            binding.dot.visibility = if (category.isSelected) View.VISIBLE else View.INVISIBLE
+            if (category.isSelected) {
+                binding.categoryNameTextView.isSelected = true
+                binding.dot.visibility = View.VISIBLE
+            } else {
+                binding.categoryNameTextView.isSelected = false
+                binding.dot.visibility = View.INVISIBLE
+            }
         }
     }
 }

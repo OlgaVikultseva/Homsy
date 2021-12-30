@@ -8,17 +8,6 @@ import androidx.appcompat.widget.AppCompatTextView
 
 class VerticalTextView(context: Context, attrs: AttributeSet) : AppCompatTextView(context, attrs) {
 
-    private val _isSelected: Boolean
-
-    init {
-        paint.apply {
-            color = currentTextColor
-        }
-        val attributeArray: TypedArray = context.obtainStyledAttributes(attrs, R.styleable.VerticalTextView)
-        _isSelected = attributeArray.getBoolean(R.styleable.VerticalTextView_isSelected, false)
-        attributeArray.recycle()
-    }
-
     private val text by lazy { getText().toString() }
     private val textHeight by lazy { paint.descent() - paint.ascent() }
     private val xCoordinate by lazy { paddingStart.toFloat() }
@@ -44,6 +33,7 @@ class VerticalTextView(context: Context, attrs: AttributeSet) : AppCompatTextVie
     }
 
     override fun onDraw(canvas: Canvas) {
+        paint.color = currentTextColor
         canvas.translate(0f, height.toFloat())
         canvas.rotate(270f, 0f, 0f)
         canvas.drawText(text, xCoordinate, yCoordinate, paint)
