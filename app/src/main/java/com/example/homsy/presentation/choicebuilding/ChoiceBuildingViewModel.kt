@@ -17,8 +17,12 @@ class ChoiceBuildingViewModel : ViewModel() {
     private val _buildings = MutableLiveData<List<BuildingItem>>()
     val buildings: LiveData<List<BuildingItem>> = _buildings
 
+    init {
+        _categories.value = dataSource.getCategoryList()
+        _buildings.value = dataSource.getBuildingList()
+    }
+
     fun onCategoryClicked(categoryId: Int) {
-        categories.value?.filter { it.id == categoryId }
         // todo установить для категории с таким id isSelected = true, для остальных false
     }
 

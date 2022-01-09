@@ -20,10 +20,10 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginStart="14dp"
-            android:layout_marginEnd="14dp"
             android:layout_marginTop="14dp"
-            android:scaleType="centerCrop"
+            android:layout_marginEnd="14dp"
             android:elevation="8dp"
+            android:scaleType="centerCrop"
             app:layout_constraintDimensionRatio="1:1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -31,30 +31,26 @@
             app:shapeAppearanceOverlay="@style/RoundedShape16dp" />
 
         <TextView
-            android:id="@+id/location"
+            android:id="@+id/location_text_view"
+            style="@style/TextAppearanceTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
-            android:textColor="?android:textColorSecondary"
-            android:textSize="17sp"
-            android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/building_image_view"
             tools:text="Central park" />
 
         <TextView
-            android:id="@+id/building_type"
+            android:id="@+id/building_type_text_view"
+            style="@style/TextAppearanceSubtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="4dp"
             android:layout_marginBottom="16dp"
-            android:textColor="?android:textColorPrimary"
-            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/location"
+            app:layout_constraintTop_toBottomOf="@+id/location_text_view"
             tools:text="@string/apartment_building_type" />
 
         <ImageButton
@@ -63,12 +59,12 @@
             android:layout_height="40dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/button_shape"
-            android:padding="8dp"
             android:elevation="1dp"
+            android:padding="8dp"
             android:src="@drawable/ic_heart"
-            app:layout_constraintBottom_toBottomOf="@+id/building_type"
+            app:layout_constraintBottom_toBottomOf="@+id/building_type_text_view"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/location"
+            app:layout_constraintTop_toTopOf="@+id/location_text_view"
             tools:ignore="ContentDescription" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

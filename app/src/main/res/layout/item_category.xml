@@ -10,9 +10,7 @@
         android:id="@+id/category_name_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/category_text"
+        style="@style/TextAppearanceHeadline3"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,8 +19,8 @@
 
     <View
         android:id="@+id/dot"
-        android:layout_width="7dp"
-        android:layout_height="7dp"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
         android:background="@drawable/ic_dot"
         app:layout_constraintBottom_toBottomOf="@+id/category_name_text_view"
         app:layout_constraintStart_toEndOf="@+id/category_name_text_view"
