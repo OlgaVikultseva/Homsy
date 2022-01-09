@@ -23,7 +23,13 @@ class ChoiceBuildingViewModel : ViewModel() {
     }
 
     fun onCategoryClicked(categoryId: Int) {
-        // todo установить для категории с таким id isSelected = true, для остальных false
+        _categories.value = _categories.value?.map {
+            if (it.id == categoryId) {
+                it.copy(isSelected = true)
+            } else {
+                it.copy(isSelected = false)
+            }
+        }
     }
 
     fun onBuildingClicked(buildingId: Int) {

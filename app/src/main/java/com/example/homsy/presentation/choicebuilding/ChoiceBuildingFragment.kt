@@ -36,7 +36,11 @@ class ChoiceBuildingFragment : Fragment() {
             adapter = buildingAdapter
         }
 
-        viewModel.categories.observe(this) { categoryAdapter.categories = it }
-        viewModel.buildings.observe(this) { buildingAdapter.buildings = it }
+        viewModel.categories.observe(this) {
+            categoryAdapter.categories = it
+        }
+        viewModel.buildings.observe(this) {
+            buildingAdapter.buildings = it
+        }
     }
 }
