@@ -1,7 +1,6 @@
 package com.example.homsy
 
 import android.content.Context
-import android.content.res.TypedArray
 import android.graphics.Canvas
 import android.util.AttributeSet
 import androidx.appcompat.widget.AppCompatTextView
@@ -16,19 +15,6 @@ class VerticalTextView(context: Context, attrs: AttributeSet) : AppCompatTextVie
 
     override fun onMeasure(widthMeasureSpec: Int, heightMeasureSpec: Int) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec)
-//
-//        val width = when (MeasureSpec.getMode(widthMeasureSpec)) {
-//            MeasureSpec.EXACTLY -> MeasureSpec.getSize(widthMeasureSpec)
-//            else -> throw Exception("Mode is not EXACTLY")
-//        }
-//
-//        val height = when (MeasureSpec.getMode(heightMeasureSpec)) {
-//            MeasureSpec.EXACTLY -> MeasureSpec.getSize(heightMeasureSpec)
-//            else -> throw Exception("Mode is not EXACTLY")
-//        }
-//
-//        setMeasuredDimension(height, width)
-
         setMeasuredDimension(measuredHeight, measuredWidth)
     }
 
