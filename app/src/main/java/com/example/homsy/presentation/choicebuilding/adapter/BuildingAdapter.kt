@@ -37,6 +37,7 @@ class BuildingAdapter(
 
         fun bind(building: BuildingItem) {
             binding.apply {
+                priceTextView.text = building.price
                 locationTextView.text = building.location
                 buildingTypeTextView.text = building.buildingType
                 buildingImageView.setImageDrawable(

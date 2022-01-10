@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="RoundedShape16dp">
+    <style name="RoundedShape10dp">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">@dimen/corner_radius_16dp</item>
+        <item name="cornerSize">@dimen/corner_radius_10dp</item>
     </style>
     <style name="RoundedShape8dp">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/corner_radius_8dp</item>
     </style>
     <style name="TextAppearanceTitle">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">16sp</item>
         <item name="android:textColor">?android:textColorSecondary</item>
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">@font/montserrat</item>
@@ -28,7 +28,7 @@
         <item name="android:fontFamily">@font/montserrat</item>
     </style>
     <style name="TextAppearanceHeadline2">
-        <item name="android:textSize">32sp</item>
+        <item name="android:textSize">30sp</item>
         <item name="android:lineSpacingExtra">10dp</item>
         <item name="android:textColor">?android:textColorSecondary</item>
         <item name="android:textStyle">bold</item>
@@ -41,8 +41,14 @@
         <item name="android:fontFamily">@font/montserrat</item>
     </style>
     <style name="TextAppearanceBody">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textColor">?android:textColorPrimary</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+    <style name="TextAppearanceBodyInverse">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:textColorPrimaryInverse</item>
         <item name="android:textStyle">normal</item>
         <item name="android:fontFamily">@font/montserrat</item>
     </style>

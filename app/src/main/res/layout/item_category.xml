@@ -19,8 +19,8 @@
 
     <View
         android:id="@+id/dot"
-        android:layout_width="8dp"
-        android:layout_height="8dp"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
         android:background="@drawable/ic_dot"
         app:layout_constraintBottom_toBottomOf="@+id/category_name_text_view"
         app:layout_constraintStart_toEndOf="@+id/category_name_text_view"

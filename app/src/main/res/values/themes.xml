@@ -1,13 +1,23 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Theme.Homsy" parent="Theme.MaterialComponents.Light.NoActionBar">
-        <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/black6</item>
-        <item name="colorSecondary">@color/blue</item>
-        <item name="colorSecondaryVariant">@color/dark_blue</item>
+
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorPrimaryVariant">@color/color_primary_variant</item>
+
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorSecondaryVariant">@color/color_secondary_variant</item>
+        <item name="colorSecondaryVariant30">@color/color_secondary_variant30</item>
+
+        <item name="android:textColorPrimary">@color/text_color_primary</item>
+        <item name="android:textColorPrimaryInverse">@color/text_color_primary_inverse</item>
+
+        <item name="android:textColorSecondary">@color/text_color_secondary</item>
+        <item name="android:textColorSecondaryInverse">@color/text_color_secondary_inverse</item>
+
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
-        <item name="backgroundColor">@color/black4</item>
-        <item name="colorSurface">@color/white</item>
-        <item name="android:textColorPrimary">@color/light_gray</item>
-        <item name="android:textColorSecondary">@color/medium_gray</item>
+
+        <item name="backgroundColor">@color/background_color</item>
+        <item name="colorSurface">@color/color_surface</item>
+
     </style>
 </resources>
