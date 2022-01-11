@@ -2,17 +2,14 @@
 <resources>
     <color name="color_primary">#FFFFFFFF</color>
     <color name="color_primary_variant">#0F000000</color>
-
     <color name="color_secondary">#1B75CD</color>
     <color name="color_secondary_variant">#004ba0</color>
-    <color name="color_secondary_variant30">#4D1B75CD</color>
-
+    <color name="color_secondary_translucent">#331B75CD</color>
     <color name="text_color_primary">#BCBCBC</color>
     <color name="text_color_primary_inverse">#FFFFFFFF</color>
-
     <color name="text_color_secondary">#353535</color>
     <color name="text_color_secondary_inverse">#FFFFFFFF</color>
-
+    <color name="status_and_navigation_bar_color">#33000000</color>
     <color name="background_color">#0A000000</color>
     <color name="color_surface">#FFFFFFFF</color>
 

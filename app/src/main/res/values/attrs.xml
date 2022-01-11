@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <attr name="colorSecondaryVariant30" format="color" />
+    <attr name="colorSecondaryTranslucent" format="color" />
+    <attr name="statusAndNavigationBarColor" format="color" />
 </resources>
