@@ -9,4 +9,10 @@
 
     <string name="house_building_type">House</string>
     <string name="apartment_building_type">Apartment</string>
+    
+    <string name="overview">Overview</string>
+    <string name="reviews">Reviews</string>
+    <string name="pay_now">Pay Now!</string>
+    <string name="subtotal">Subtotal</string>
+
 </resources>

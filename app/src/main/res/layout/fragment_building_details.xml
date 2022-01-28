@@ -1,7 +1,99 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".presentation.buildingdetails.BuildingDetailsFragment">
+
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginStart="26dp"
+        android:background="@drawable/bg_button_primary"
+        android:elevation="4dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/headline_text_view"
+        style="@style/TextAppearanceHeadline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apartment"
+        android:textColor="?android:textColorSecondary"
+        app:layout_constraintBottom_toBottomOf="@+id/back_button"
+        app:layout_constraintEnd_toStartOf="@+id/favorite_button"
+        app:layout_constraintStart_toEndOf="@+id/back_button"
+        app:layout_constraintTop_toTopOf="@+id/back_button" />
+
+    <ImageButton
+        android:id="@+id/favorite_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/bg_button_primary"
+        android:elevation="4dp"
+        android:src="@drawable/ic_heart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/_image_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:elevation="4dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back_button"
+        app:layout_constraintWidth_percent="0.9"
+        app:shapeAppearanceOverlay="@style/RoundedLeftShape10dp"
+        app:srcCompat="@drawable/house3" />
+
+    <TextView
+        android:id="@+id/overview_text_view"
+        style="@style/TextAppearanceHeadline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:text="@string/overview"
+        app:layout_constraintStart_toStartOf="@+id/_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/_image_view" />
+
+    <View
+        android:id="@+id/overview_dot"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        android:background="@drawable/ic_dot"
+        app:layout_constraintEnd_toEndOf="@+id/overview_text_view"
+        app:layout_constraintStart_toStartOf="@+id/overview_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/overview_text_view" />
+
+    <TextView
+        android:id="@+id/reviews_text_view"
+        style="@style/TextAppearanceHeadline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/reviews"
+        app:layout_constraintStart_toEndOf="@+id/overview_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/_image_view" />
+
+    <View
+        android:id="@+id/reviews_dot"
+        android:layout_width="7dp"
+        android:layout_height="7dp"
+        android:background="@drawable/ic_dot"
+        app:layout_constraintEnd_toEndOf="@+id/reviews_text_view"
+        app:layout_constraintStart_toStartOf="@+id/reviews_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/reviews_text_view" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

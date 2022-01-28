@@ -7,14 +7,18 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.core.view.updateLayoutParams
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.homsy.R
 import com.example.homsy.databinding.FragmentChoiceBuildingBinding
+import com.example.homsy.presentation.buildingdetails.BuildingDetailsFragment
 import com.example.homsy.presentation.choicebuilding.adapter.BuildingAdapter
 import com.example.homsy.presentation.choicebuilding.adapter.CategoryAdapter
 import com.example.homsy.pxFromDp
+import com.example.homsy.setBottomMargin
+import com.example.homsy.setTopMargin
 
 class ChoiceBuildingFragment : Fragment() {
 
@@ -31,7 +35,7 @@ class ChoiceBuildingFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val categoryAdapter = CategoryAdapter(viewModel::onCategoryClicked)
-        val buildingAdapter = BuildingAdapter(viewModel::onBuildingClicked)
+        val buildingAdapter = BuildingAdapter(::onBuildingClicked)
 
         binding.categoryList.apply {
             layoutManager = LinearLayoutManager(context)
@@ -66,6 +70,13 @@ class ChoiceBuildingFragment : Fragment() {
         }
     }
 
+    private fun onBuildingClicked(buildingId: Int) {
+        requireActivity().supportFragmentManager.commit {
+            setReorderingAllowed(true)
+            replace(R.id.fragment_container_view, BuildingDetailsFragment())
+        }
+    }
+
     private fun setupInsets(context: Context) {
         ViewCompat.setOnApplyWindowInsetsListener(binding.menuButton) { menuButton, windowInsets ->
             val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -89,18 +100,6 @@ class ChoiceBuildingFragment : Fragment() {
             val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
             buildingList.setBottomMargin(insets.bottom)
             windowInsets
-        }
-    }
-
-    private fun View.setTopMargin(px: Int) {
-        this.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-            topMargin = px
-        }
-    }
-
-    private fun View.setBottomMargin(px: Int) {
-        this.updateLayoutParams<ViewGroup.MarginLayoutParams> {
-            bottomMargin = px
         }
     }
 
