@@ -1,4 +1,4 @@
-package com.example.homsy.presentation.propertydetails
+package com.example.homsy.presentation.buildingdetails
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
