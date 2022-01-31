@@ -67,6 +67,9 @@ class BuildingDetailsFragment : Fragment() {
     private fun showData(building: BuildingItem) {
         with(binding) {
             headlineTextView.text = building.buildingType
+            locationTextView.text = building.location
+            buildingTypeTextView.text = building.buildingType
+            contentTextView.text = building.description
             buildingImageView.setImageDrawable(
                 AppCompatResources.getDrawable(
                     binding.root.context,
