@@ -10,7 +10,6 @@
         android:id="@+id/back_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:layout_gravity="center"
         android:layout_marginStart="26dp"
         android:background="@drawable/bg_button_primary"
         android:elevation="4dp"
@@ -24,7 +23,6 @@
         style="@style/TextAppearanceHeadline3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Apartment"
         android:textColor="?android:textColorSecondary"
         app:layout_constraintBottom_toBottomOf="@+id/back_button"
         app:layout_constraintEnd_toStartOf="@+id/favorite_button"
@@ -44,18 +42,18 @@
         tools:ignore="ContentDescription" />
 
     <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/_image_view"
+        android:id="@+id/building_image_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="24dp"
-        android:elevation="4dp"
+        android:layout_marginTop="26dp"
+        android:elevation="10dp"
         android:scaleType="centerCrop"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/back_button"
         app:layout_constraintWidth_percent="0.9"
         app:shapeAppearanceOverlay="@style/RoundedLeftShape10dp"
-        app:srcCompat="@drawable/house3" />
+        tools:srcCompat="@drawable/house3" />
 
     <TextView
         android:id="@+id/overview_text_view"
@@ -64,8 +62,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="26dp"
         android:text="@string/overview"
-        app:layout_constraintStart_toStartOf="@+id/_image_view"
-        app:layout_constraintTop_toBottomOf="@+id/_image_view" />
+        app:layout_constraintStart_toStartOf="@+id/building_image_view"
+        app:layout_constraintTop_toBottomOf="@+id/building_image_view" />
 
     <View
         android:id="@+id/overview_dot"
@@ -85,7 +83,7 @@
         android:layout_marginTop="26dp"
         android:text="@string/reviews"
         app:layout_constraintStart_toEndOf="@+id/overview_text_view"
-        app:layout_constraintTop_toBottomOf="@+id/_image_view" />
+        app:layout_constraintTop_toBottomOf="@+id/building_image_view" />
 
     <View
         android:id="@+id/reviews_dot"

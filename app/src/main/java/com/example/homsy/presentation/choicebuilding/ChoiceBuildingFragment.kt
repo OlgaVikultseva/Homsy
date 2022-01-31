@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.os.bundleOf
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.homsy.R
 import com.example.homsy.databinding.FragmentChoiceBuildingBinding
 import com.example.homsy.presentation.buildingdetails.BuildingDetailsFragment
+import com.example.homsy.presentation.buildingdetails.BuildingDetailsFragment.Companion.BUILDING_ID
 import com.example.homsy.presentation.choicebuilding.adapter.BuildingAdapter
 import com.example.homsy.presentation.choicebuilding.adapter.CategoryAdapter
 import com.example.homsy.pxFromDp
@@ -71,9 +73,12 @@ class ChoiceBuildingFragment : Fragment() {
     }
 
     private fun onBuildingClicked(buildingId: Int) {
+        val fragment = BuildingDetailsFragment().apply {
+            arguments = bundleOf(BUILDING_ID to buildingId)
+        }
         requireActivity().supportFragmentManager.commit {
             setReorderingAllowed(true)
-            replace(R.id.fragment_container_view, BuildingDetailsFragment())
+            replace(R.id.fragment_container_view, fragment)
         }
     }
 

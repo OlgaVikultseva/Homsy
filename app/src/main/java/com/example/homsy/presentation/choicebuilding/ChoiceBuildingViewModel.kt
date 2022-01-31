@@ -32,10 +32,6 @@ class ChoiceBuildingViewModel : ViewModel() {
         }
     }
 
-    fun onBuildingClicked(buildingId: Int) {
-        // todo перейти на другой экран
-    }
-
     fun onFavoriteIconClicked(buildingId: Int) {
         // todo установить для здания с таким id isFavorite = true
     }
