@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.addCallback
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -23,6 +24,11 @@ class BuildingDetailsFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        requireActivity().onBackPressedDispatcher.addCallback(this) {
+            onBackButtonClicked()
+        }
+
         val buildingId = arguments?.getInt(BUILDING_ID, -1)
         if (buildingId != null && buildingId != -1) {
             viewModelFactory = BuildingDetailsViewModelFactory(buildingId)
@@ -49,11 +55,13 @@ class BuildingDetailsFragment : Fragment() {
             }
         }
 
-        binding.overviewTextView.isSelected = true
-        binding.overviewDot.visibility = View.VISIBLE
-
-        binding.reviewsTextView.isSelected = false
-        binding.reviewsDot.visibility = View.INVISIBLE
+        with(binding) {
+            backButton.setOnClickListener { onBackButtonClicked() }
+            overviewTextView.isSelected = true
+            overviewDot.visibility = View.VISIBLE
+            reviewsTextView.isSelected = false
+            reviewsDot.visibility = View.INVISIBLE
+        }
     }
 
     private fun showData(building: BuildingItem) {
@@ -66,6 +74,10 @@ class BuildingDetailsFragment : Fragment() {
                 )
             )
         }
+    }
+
+    private fun onBackButtonClicked() {
+        requireActivity().supportFragmentManager.popBackStack()
     }
 
     private fun setupInsets(context: Context) {
