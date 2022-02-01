@@ -78,7 +78,7 @@
             android:background="@drawable/bg_button_primary"
             android:elevation="1dp"
             android:padding="8dp"
-            android:src="@drawable/ic_heart"
+            android:src="@drawable/ic_favorite"
             app:layout_constraintBottom_toBottomOf="@+id/building_type_text_view"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/location_text_view"

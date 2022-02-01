@@ -19,3 +19,6 @@ fun View.setBottomMargin(px: Int) {
 
 fun Context.pxFromDp(dp: Int): Int =
     (dp * resources.displayMetrics.density).toInt()
+
+fun Context.dpFromPx(px: Int): Int =
+    (px / resources.displayMetrics.density).toInt()

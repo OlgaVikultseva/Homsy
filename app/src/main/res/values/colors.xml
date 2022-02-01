@@ -2,9 +2,9 @@
 <resources>
     <color name="color_primary">#FFFFFFFF</color>
     <color name="color_primary_variant">#0F000000</color>
-    <color name="color_secondary">#339FDC</color>
-    <color name="color_secondary_variant">#004ba0</color>
-    <color name="color_secondary_translucent">#331B75CD</color>
+    <color name="color_secondary">#30A4E4</color>
+    <color name="color_secondary_variant">#097DBD</color>
+    <color name="color_secondary_translucent">#3330A4E4</color>
     <color name="text_color_primary">#BCBCBC</color>
     <color name="text_color_primary_inverse">#FFFFFFFF</color>
     <color name="text_color_secondary">#353535</color>

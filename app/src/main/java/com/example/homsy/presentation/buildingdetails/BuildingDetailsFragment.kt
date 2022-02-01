@@ -1,6 +1,5 @@
 package com.example.homsy.presentation.buildingdetails
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -11,9 +10,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.example.homsy.R
 import com.example.homsy.databinding.FragmentBuildingDetailsBinding
 import com.example.homsy.presentation.choicebuilding.adapter.BuildingItem
-import com.example.homsy.pxFromDp
+import com.example.homsy.setBottomMargin
 import com.example.homsy.setTopMargin
 
 class BuildingDetailsFragment : Fragment() {
@@ -42,7 +42,7 @@ class BuildingDetailsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentBuildingDetailsBinding.inflate(inflater, container, false)
-        setupInsets(requireContext())
+        setupInsets()
         return binding.root
     }
 
@@ -70,6 +70,7 @@ class BuildingDetailsFragment : Fragment() {
             locationTextView.text = building.location
             buildingTypeTextView.text = building.buildingType
             contentTextView.text = building.description
+            priceTextView.text = getString(R.string.price_placeholder, building.price)
             buildingImageView.setImageDrawable(
                 AppCompatResources.getDrawable(
                     binding.root.context,
@@ -83,23 +84,21 @@ class BuildingDetailsFragment : Fragment() {
         requireActivity().supportFragmentManager.popBackStack()
     }
 
-    private fun setupInsets(context: Context) {
-        ViewCompat.setOnApplyWindowInsetsListener(binding.backButton) { backButton, windowInsets ->
+    private fun setupInsets() {
+        ViewCompat.setOnApplyWindowInsetsListener(binding.headerView) { headerView, windowInsets ->
             val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-            backButton.setTopMargin(context.pxFromDp(BACK_BUTTON_TOP_MARGIN_DP) + insets.top)
+            headerView.setTopMargin(insets.top)
             windowInsets
         }
 
-        ViewCompat.setOnApplyWindowInsetsListener(binding.favoriteButton) { favoriteButton, windowInsets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.footerView) { footerView, windowInsets ->
             val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-            favoriteButton.setTopMargin(context.pxFromDp(FAVORITE_BUTTON_TOP_MARGIN_DP) + insets.top)
+            footerView.setBottomMargin(insets.bottom)
             windowInsets
         }
     }
 
     companion object {
         const val BUILDING_ID = "BUILDING_ID"
-        private const val BACK_BUTTON_TOP_MARGIN_DP = 26
-        private const val FAVORITE_BUTTON_TOP_MARGIN_DP = 26
     }
 }

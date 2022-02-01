@@ -12,15 +12,13 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.commit
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.homsy.R
+import androidx.recyclerview.widget.RecyclerView
+import com.example.homsy.*
 import com.example.homsy.databinding.FragmentChoiceBuildingBinding
 import com.example.homsy.presentation.buildingdetails.BuildingDetailsFragment
 import com.example.homsy.presentation.buildingdetails.BuildingDetailsFragment.Companion.BUILDING_ID
 import com.example.homsy.presentation.choicebuilding.adapter.BuildingAdapter
 import com.example.homsy.presentation.choicebuilding.adapter.CategoryAdapter
-import com.example.homsy.pxFromDp
-import com.example.homsy.setBottomMargin
-import com.example.homsy.setTopMargin
 
 class ChoiceBuildingFragment : Fragment() {
 
@@ -54,14 +52,6 @@ class ChoiceBuildingFragment : Fragment() {
         binding.buildingList.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = buildingAdapter
-            addItemDecoration(
-                MarginItemDecoration(
-                    requireContext(),
-                    BUILDING_LIST_TOP_MARGIN_DP,
-                    BUILDING_LIST_INTERNAL_MARGIN_DP,
-                    BUILDING_LIST_BOTTOM_MARGIN_DP
-                )
-            )
         }
 
         viewModel.categories.observe(this) {
@@ -84,39 +74,34 @@ class ChoiceBuildingFragment : Fragment() {
     }
 
     private fun setupInsets(context: Context) {
-        ViewCompat.setOnApplyWindowInsetsListener(binding.menuButton) { menuButton, windowInsets ->
+        ViewCompat.setOnApplyWindowInsetsListener(binding.headerView) { headerView, windowInsets ->
             val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-            menuButton.setTopMargin(context.pxFromDp(MENU_BUTTON_TOP_MARGIN_DP) + insets.top)
-            windowInsets
-        }
-
-        ViewCompat.setOnApplyWindowInsetsListener(binding.userPhotoImageView) { userPhotoImageView, windowInsets ->
-            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-            userPhotoImageView.setTopMargin(context.pxFromDp(USER_PHOTO_IMAGE_VIEW_TOP_MARGIN_DP) + insets.top)
-            windowInsets
-        }
-
-        ViewCompat.setOnApplyWindowInsetsListener(binding.categoryList) { categoryList, windowInsets ->
-            val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-            categoryList.setBottomMargin(insets.bottom)
+            headerView.setTopMargin(insets.top)
             windowInsets
         }
 
         ViewCompat.setOnApplyWindowInsetsListener(binding.buildingList) { buildingList, windowInsets ->
             val insets = windowInsets.getInsets(WindowInsetsCompat.Type.systemBars())
-            buildingList.setBottomMargin(insets.bottom)
+            if ((buildingList as RecyclerView).itemDecorationCount == 0) {
+                buildingList.addItemDecoration(
+                    MarginItemDecoration(
+                        context,
+                        BUILDING_LIST_TOP_MARGIN_DP,
+                        BUILDING_LIST_INTERNAL_MARGIN_DP,
+                        BUILDING_LIST_BOTTOM_MARGIN_DP + context.dpFromPx(insets.bottom)
+                    )
+                )
+            }
             windowInsets
         }
     }
 
     companion object {
-        private const val MENU_BUTTON_TOP_MARGIN_DP = 26
-        private const val USER_PHOTO_IMAGE_VIEW_TOP_MARGIN_DP = 26
-        private const val CATEGORY_LIST_TOP_MARGIN_DP = 26
+        private const val CATEGORY_LIST_TOP_MARGIN_DP = 20
         private const val CATEGORY_LIST_INTERNAL_MARGIN_DP = 20
-        private const val CATEGORY_LIST_BOTTOM_MARGIN_DP = 26
-        private const val BUILDING_LIST_TOP_MARGIN_DP = 26
+        private const val CATEGORY_LIST_BOTTOM_MARGIN_DP = 20
+        private const val BUILDING_LIST_TOP_MARGIN_DP = 20
         private const val BUILDING_LIST_INTERNAL_MARGIN_DP = 16
-        private const val BUILDING_LIST_BOTTOM_MARGIN_DP = 26
+        private const val BUILDING_LIST_BOTTOM_MARGIN_DP = 20
     }
 }

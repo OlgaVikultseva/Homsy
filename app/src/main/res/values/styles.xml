@@ -4,15 +4,23 @@
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/corner_radius_10dp</item>
     </style>
+
     <style name="RoundedLeftShape10dp">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeTopLeft">@dimen/corner_radius_10dp</item>
         <item name="cornerSizeBottomLeft">@dimen/corner_radius_10dp</item>
     </style>
+
     <style name="RoundedShape8dp">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">@dimen/corner_radius_8dp</item>
     </style>
+
+    <style name="RoundedShape50Percent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
     <style name="TextAppearanceTitle">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">?android:textColorSecondary</item>
@@ -25,7 +33,7 @@
     </style>
 
     <style name="TextAppearanceSubtitle">
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textColor">?android:textColorPrimary</item>
         <item name="android:textStyle">normal</item>
         <item name="android:fontFamily">@font/montserrat</item>
@@ -42,6 +50,7 @@
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">@font/montserrat</item>
     </style>
+
     <style name="TextAppearanceHeadline2">
         <item name="android:textSize">28sp</item>
         <item name="android:lineSpacingExtra">10dp</item>
@@ -49,12 +58,21 @@
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">@font/montserrat</item>
     </style>
+
     <style name="TextAppearanceHeadline3">
-        <item name="android:textSize">19sp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">?android:textColorSecondary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/montserrat</item>
+    </style>
+
+    <style name="TextAppearanceSelectableHeadline">
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/selectable_text</item>
         <item name="android:textStyle">bold</item>
         <item name="android:fontFamily">@font/montserrat</item>
     </style>
+
     <style name="TextAppearanceBody">
         <item name="android:textSize">16sp</item>
         <item name="android:textColor">?android:textColorPrimary</item>
@@ -62,11 +80,9 @@
         <item name="android:lineSpacingMultiplier">1.4</item>
         <item name="android:fontFamily">@font/montserrat</item>
     </style>
-    <style name="TextAppearanceBodyInverse">
-        <item name="android:textSize">16sp</item>
+
+    <style name="TextAppearanceBodyInverse" parent="TextAppearanceBody">
         <item name="android:textColor">?android:textColorPrimaryInverse</item>
-        <item name="android:textStyle">normal</item>
-        <item name="android:lineSpacingMultiplier">1.4</item>
-        <item name="android:fontFamily">@font/montserrat</item>
     </style>
+
 </resources>

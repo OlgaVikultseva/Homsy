@@ -8,9 +8,8 @@
     <View
         android:id="@+id/header_view"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="216dp"
         android:background="?colorPrimary"
-        app:layout_constraintBottom_toBottomOf="@+id/headline_text_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -19,12 +18,13 @@
         android:id="@+id/menu_button"
         android:layout_width="40dp"
         android:layout_height="40dp"
+        android:layout_marginTop="26dp"
         android:layout_marginStart="26dp"
         android:background="@drawable/bg_button_primary"
         android:elevation="4dp"
         android:src="@drawable/ic_menu"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/header_view"
+        app:layout_constraintTop_toTopOf="@id/header_view"
         tools:ignore="ContentDescription" />
 
     <com.google.android.material.imageview.ShapeableImageView
@@ -32,10 +32,11 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_marginEnd="26dp"
+        android:layout_marginTop="26dp"
         android:elevation="4dp"
         android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/header_view"
+        app:layout_constraintTop_toTopOf="@id/header_view"
         app:shapeAppearanceOverlay="@style/RoundedShape8dp"
         app:srcCompat="@drawable/user_photo" />
 
@@ -46,9 +47,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="26dp"
         android:layout_marginEnd="26dp"
-        android:paddingTop="30dp"
-        android:paddingBottom="30dp"
         android:text="@string/choice_building_screen_header_text"
+        app:layout_constraintBottom_toBottomOf="@+id/header_view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/menu_button" />
