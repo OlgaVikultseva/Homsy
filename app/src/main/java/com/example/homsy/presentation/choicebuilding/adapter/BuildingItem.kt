@@ -6,7 +6,7 @@ data class BuildingItem(
     val buildingType: String,
     val description: String,
     val price: String,
-    val resId: Int,
+    val resIds: List<Int>,
 //    val imageUrl: String,
     val isFavorite: Boolean
 )

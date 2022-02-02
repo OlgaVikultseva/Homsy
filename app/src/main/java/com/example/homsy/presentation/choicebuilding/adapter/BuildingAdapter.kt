@@ -43,7 +43,7 @@ class BuildingAdapter(
                 buildingImageView.setImageDrawable(
                     AppCompatResources.getDrawable(
                         binding.root.context,
-                        building.resId
+                        building.resIds.first()
                     )
                 )
             }

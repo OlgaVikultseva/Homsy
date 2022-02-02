@@ -78,7 +78,7 @@
                 android:elevation="6dp"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toTopOf="@+id/building_type_text_view"
-                app:layout_constraintStart_toStartOf="@+id/building_image_view"
+                app:layout_constraintStart_toStartOf="@+id/main_photo_image_view"
                 tools:text="9 Rosamond Street" />
 
             <TextView
@@ -90,12 +90,52 @@
                 android:layout_marginBottom="16dp"
                 android:elevation="6dp"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="@+id/building_image_view"
-                app:layout_constraintStart_toStartOf="@+id/building_image_view"
+                app:layout_constraintBottom_toBottomOf="@+id/main_photo_image_view"
+                app:layout_constraintStart_toStartOf="@+id/main_photo_image_view"
                 tools:text="Apartment" />
 
+            <LinearLayout
+                android:id="@+id/photos_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_button_primary"
+                android:elevation="6dp"
+                android:orientation="vertical"
+                android:padding="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/photos_button"
+                app:layout_constraintEnd_toEndOf="@+id/photos_button"
+                app:layout_constraintStart_toStartOf="@+id/photos_button">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/first_photo_image_view"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedShape10dp"
+                    tools:src="@drawable/house30" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/second_photo_image_view"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedShape10dp"
+                    tools:src="@drawable/house30" />
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/third_photo_image_view"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="8dp"
+                    android:scaleType="centerCrop"
+                    app:shapeAppearanceOverlay="@style/RoundedShape10dp"
+                    tools:src="@drawable/house30" />
+
+            </LinearLayout>
+
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/other_photos_button"
+                android:id="@+id/photos_button"
                 android:layout_width="70dp"
                 android:layout_height="70dp"
                 android:layout_marginEnd="26dp"
@@ -104,15 +144,15 @@
                 android:padding="6dp"
                 android:src="@drawable/ic_other_photos"
                 app:contentPadding="16dp"
-                app:layout_constraintBottom_toBottomOf="@+id/building_image_view"
+                app:layout_constraintBottom_toBottomOf="@+id/main_photo_image_view"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/building_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/main_photo_image_view"
                 app:shapeAppearanceOverlay="@style/RoundedShape50Percent"
                 app:strokeColor="@color/white"
                 app:strokeWidth="10dp" />
 
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/building_image_view"
+                android:id="@+id/main_photo_image_view"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginStart="36dp"
@@ -122,7 +162,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:shapeAppearanceOverlay="@style/RoundedLeftShape10dp"
-                tools:srcCompat="@drawable/house3" />
+                tools:srcCompat="@drawable/house30" />
 
             <TextView
                 android:id="@+id/overview_text_view"
@@ -131,8 +171,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="26dp"
                 android:text="@string/overview"
-                app:layout_constraintStart_toStartOf="@+id/building_image_view"
-                app:layout_constraintTop_toBottomOf="@+id/building_image_view" />
+                app:layout_constraintStart_toStartOf="@+id/main_photo_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/main_photo_image_view" />
 
             <View
                 android:id="@+id/overview_dot"
@@ -152,7 +192,7 @@
                 android:layout_marginTop="26dp"
                 android:text="@string/reviews"
                 app:layout_constraintStart_toEndOf="@+id/overview_text_view"
-                app:layout_constraintTop_toBottomOf="@+id/building_image_view" />
+                app:layout_constraintTop_toBottomOf="@+id/main_photo_image_view" />
 
             <View
                 android:id="@+id/reviews_dot"
@@ -172,7 +212,7 @@
                 android:layout_marginEnd="26dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/building_image_view"
+                app:layout_constraintStart_toStartOf="@+id/main_photo_image_view"
                 app:layout_constraintTop_toTopOf="@+id/overview_dot"
                 tools:text="The apartment has a floor space of 60 square meters and it’s located on the first floor, and in it you will find a spacious living room with a stylish sitting area with smart TV with Netflix included, fully equipped kitchen and a dining. The sofa extends as a bed suitable for two people. The bedroom comes with the most comfortable bed with a choice of pillows and blackout curtains for the perfect night in after a long day. There are separate bathroom with a shower and a toilet that come with all the necessary toiletries." />
 
